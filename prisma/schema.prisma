@@ -17,7 +17,7 @@ model User {
 
   accounts      Account[]
   sessions      Session[]
-  TimeIntervals UserTimeInterval[]
+  timeIntervals UserTimeInterval[]
 
   @@map("users")
 }
