@@ -39,6 +39,8 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
     return dayjs().set('date', 1)
   })
 
+  const router = useRouter()
+
   function handlePreviousMonth() {
     const previousMonthDate = currentDate.subtract(1, 'month')
 
@@ -50,8 +52,6 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
 
     setCurrentDate(previousMonthDate)
   }
-
-  const router = useRouter()
 
   const shortWeekDays = getWeekDays({ short: true })
 
